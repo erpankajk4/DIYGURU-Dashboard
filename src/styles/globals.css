@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 235 100% 98%;
+    --foreground: 284 29% 42%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 280 36% 27%;
+    --primary-foreground: 280 37% 38%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 280 36% 27%;
+    --foreground: 235 100% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-black;
+  }
+  p {
+    @apply text-zinc-400;
+  }
+  html {
+    font-family: "Work Sans", sans-serif;
+  }
+  flex-center{
+    @apply flex items-center justify-center;
+  }
+  flex-item-center{
+    @apply flex items-center;
+  }
+  flex-col{
+    @apply flex flex-col;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+   /* thin-scrollbar */
+    /* width */
+    .thin-scrollbar::-webkit-scrollbar {
+      width: 6px;
+     
+    }
+    
+    /* Track */
+    .thin-scrollbar::-webkit-scrollbar-track {
+      background: #adadad;
+      border-radius: 5px;
+    }
+    
+    /* Handle */
+    .thin-scrollbar::-webkit-scrollbar-thumb {
+      background: #9c62af;
+      border-radius: 2px;
+    }
+    
+    /* Handle on hover */
+    .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+
+}
+
+.custom-y-axis-label {
+  transform: rotate(-90deg) translateY(25px) !important; /* Adjust rotation and translation as needed */
+  transform-origin: 419px 135px !important; /* Adjust origin point for rotation */
+  font: bold;
+}
+
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+   
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #adadad;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7a4c8a;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555e8;
+  }
+
+  @media(max-width: 640px){
+    ::-webkit-scrollbar {
+     height: 0px;
+    }
+  }
+
+
+ /* heat chart */
+
+ /*
+ * react-calendar-heatmap styles
+ *
+ * All of the styles in this file are optional and configurable!
+ * The github and gitlab color scales are provided for reference.
+ */
+
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 5px;
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #700769eb;
+  stroke-width: 1px;
+}
+
+/*
+ * Default color scale
+ */
+
+.react-calendar-heatmap .color-empty {
+  fill: #eeeeee!important;
+}
+
+.react-calendar-heatmap .color-filled {
+  fill: #4d2c5e!important;
+}
+
+/*
+ * Github color scale
+ */
+
+.react-calendar-heatmap .color-github-0 {
+  fill: #eeeeee!important;
+}
+.react-calendar-heatmap .color-github-1 {
+  fill: #cda3e1!important;
+}
+.react-calendar-heatmap .color-github-2 {
+  fill: #b392c4!important;
+}
+.react-calendar-heatmap .color-github-3 {
+  fill: #775c84!important;
+}
+.react-calendar-heatmap .color-github-4 {
+  fill: #4d2c5e!important;
+}
+
+/*
+ * Gitlab color scale
+ */
+
+.react-calendar-heatmap .color-gitlab-0 {
+  fill: #ededed;
+}
+.react-calendar-heatmap .color-gitlab-1 {
+  fill: #acd5f2;
+}
+.react-calendar-heatmap .color-gitlab-2 {
+  fill: #7fa8d1;
+}
+.react-calendar-heatmap .color-gitlab-3 {
+  fill: #49729b;
+}
+.react-calendar-heatmap .color-gitlab-4 {
+  fill: #254e77;
+}
+.react-calendar-heatmap .color-scale-1 { fill: #e4b8fa!important; }
+.react-calendar-heatmap .color-scale-2 { fill: #b08bc2!important; }
+.react-calendar-heatmap .color-scale-3 { fill: #9061a8!important; }
+.react-calendar-heatmap .color-scale-4 { fill: #4d2c5e!important; }
