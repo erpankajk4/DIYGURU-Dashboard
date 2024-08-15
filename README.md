@@ -2,7 +2,7 @@
 A beautifully UI designed Dashboard to manage and track students, teachers and Courses.
 
 ## Deployed Links - 
-https://diyguru-dashboard.vercel.app/
+https://diyguru-dashboard.vercel.app/ </br>
 ![Overview Dashboard](https://github.com/user-attachments/assets/d232ae5e-ceed-454c-8939-9c14853a0cc3)
 
 ## Login/SignUp - 
