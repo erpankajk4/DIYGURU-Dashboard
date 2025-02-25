@@ -4,10 +4,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Tab from "@/components/tabFilteration/Tab";
 import TabContent from "@/components/tabFilteration/TabContent";
-import { IoPersonCircleOutline } from "react-icons/io5";
+import { IoLogInOutline, IoPersonCircleOutline } from "react-icons/io5";
 import { CiLogout, CiSettings } from "react-icons/ci";
 import { dashboard } from "@/data/dashboard";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import Link from "next/link";
+import { MdOutlinePersonAddAlt } from "react-icons/md";
 
 function Dashboard() {
   const router = useRouter();
@@ -96,6 +98,12 @@ function Dashboard() {
         {/* Preference section */}
         <h6 className="m-5 mb-3 mt-16 text-sm">Preference</h6>
         <ul className="flex flex-col space-y-2 px-5 pb-2">
+          <Link href="/login" className="flex cursor-pointer items-center gap-2 px-5 py-1.5">
+            <IoLogInOutline  className="text-2xl" /> LogIn
+          </Link>
+          <Link href="/signup" className="flex cursor-pointer items-center gap-2 px-5 py-1.5">
+            <MdOutlinePersonAddAlt  className="text-2xl" /> SignUp
+          </Link>
           <li className="flex cursor-pointer items-center gap-2 px-5 py-1.5">
             <IoPersonCircleOutline className="text-2xl" /> Profile
           </li>
